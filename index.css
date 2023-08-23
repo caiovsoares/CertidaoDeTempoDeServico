@@ -1,4 +1,61 @@
-* {
+/*
+ESTILIZAÇÃO DO PDF
+*/
+
+#body {
+  margin-inline: 80px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#justificado {
+  text-align: justify;
+}
+
+.esquerda {
+  text-align: left;
+}
+
+.direita {
+  text-align: right;
+}
+
+#anexos {
+  display: flex;
+  flex-direction: row;
+}
+
+#anexos1 {
+  margin-right: 5px;
+}
+
+#protocolo-data,
+#data {
+  display: flex;
+  flex-direction: row;
+}
+
+#protocolo-data {
+  justify-content: space-between;
+}
+
+#assinatura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#assinatura-box {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+/*
+ESTILIZAÇÃO DO FORMULÁRIO
+*/
+
+body {
   font-size: 14px;
   font-family: open_sansregular,open sans,Arial,Helvetica,sans-serif;
 }
@@ -7,6 +64,8 @@
   display:flex;
   flex-direction: column;
   width: fit-content;
+  width: 100%;
+  align-items: center;
 }
 
 .control-group {
@@ -14,6 +73,16 @@
   flex-direction: row;
   align-items: center;
   margin: 2px 0px 20px 0px;
+}
+
+.naturalidade-group {
+  display:flex;
+  margin: 2px 0px 20px 0px;
+}
+
+.naturalidade-group2 {
+  display:flex;
+  align-items: center;
 }
 
 label {
@@ -41,7 +110,7 @@ input[type=text], input[type=number], input[type=date], select {
 }
 
 input[type=submit] {
-  width: auto;
+  width: 600px;
   background-color: #4c74af;
   color: white;
   padding: 14px 20px;
@@ -72,4 +141,60 @@ input[type=submit] {
 #postoGraduacao {
   width: 160px;
   margin-left: 10px;
+}
+
+/*
+ESTILIZAÇÃO PARA CELULAR
+*/
+
+@media only screen and (max-width: 600px) {
+  
+  label {
+    width: 100%;
+    text-align: left;
+    margin: 0
+  }
+      
+  input[type=submit] {
+    width: 300px;
+  }
+
+  .control-group {
+    flex-direction: column;
+  }
+
+  .naturalidade-group {
+    display:flex;
+    margin: 2px 0px 20px 0px;
+    width: 300px;
+    justify-content: space-between;
+  }
+
+  .naturalidade-group2 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #cidadeNaturalidade {
+    width: 150px;
+  }
+
+  #estadoNaturalidade {
+    width: 100px;
+  }
+
+  #labelEstadoNaturalidade {
+    width: auto;
+    margin: 0;
+  }
+
+  #selectPostoGraduacao{
+    width: 300px;
+  }
+
+  #postoGraduacao {
+    width: 300px;
+    margin: 0;
+  }
 }

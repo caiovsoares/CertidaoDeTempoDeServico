@@ -9,7 +9,7 @@
   <body class="no-print">
     <form action="javascript:enviar()" class="form-group">
       <div class="control-group">
-        <label for="falecido">Falecido?</label>
+        <label for="falecido">Militar Falecido?</label>
         <input type="checkbox" id="falecido" name="falecido" />
       </div>
       <span id="falecidoFields">
@@ -76,23 +76,27 @@
         <label for="nascimento">Data de nascimento:</label>
         <input type="date" id="nascimento" name="nascimento" required />
       </div>
-      <div class="control-group">
-        <label for="cidadeNaturalidade">Natural da Cidade de:</label>
-        <input
-          type="text"
-          id="cidadeNaturalidade"
-          name="cidadeNaturalidade"
-          required
-        />
-        <label for="estadoNaturalidade" id="labelEstadoNaturalidade"
-          >e do Estado de:</label
-        >
-        <input
-          type="text"
-          id="estadoNaturalidade"
-          name="estadoNaturalidade"
-          required
-        />
+      <div class="naturalidade-group">
+        <div class="naturalidade-group2">
+          <label for="cidadeNaturalidade">Natural da Cidade de:</label>
+          <input
+            type="text"
+            id="cidadeNaturalidade"
+            name="cidadeNaturalidade"
+            required
+          />
+        </div>
+        <div class="naturalidade-group2">
+          <label for="estadoNaturalidade" id="labelEstadoNaturalidade"
+            >e do Estado de:</label
+          >
+          <input
+            type="text"
+            id="estadoNaturalidade"
+            name="estadoNaturalidade"
+            required
+          />
+        </div>
       </div>
       <div class="control-group">
         <label for="ddd">DDD:</label>
@@ -124,7 +128,13 @@
           <option value="Graduação">Graduação</option>
           <option value="Posto">Posto</option>
         </select>
-        <input type="text" id="postoGraduacao" name="postoGraduacao" required />
+        <input
+          type="text"
+          id="postoGraduacao"
+          name="postoGraduacao"
+          placeholder="Exemplo: S2"
+          required
+        />
       </div>
       <div class="control-group">
         <label for="certidao">Tipo de Certidão:</label
@@ -157,7 +167,7 @@
         <label for="observacao">Observação:</label>
         <input type="text" id="observacao" name="observacao" />
       </div>
-      <input type="submit" value="ENVIAR" />
+      <input type="submit" value="CRIAR REQUERIMENTO" />
     </form>
   </body>
   <script src="index.js"></script>

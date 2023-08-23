@@ -3,42 +3,13 @@ const htmlBase = `<!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style type="text/css">
-      #body {
-        margin-inline: 80px;
-        text-align: center;
-        font-family: 'Times New Roman', Times, serif;
-      }
-
-      #justificado {
-        text-align: justify;
-      }
-
-      #anexos {
-        display: flex;
-        flex-direction: row;
-      }
-
-      #anexos1 {
-        margin-right: 5px;
-      }
-
-      #protocolo-data,
-      #data {
-        display: flex;
-        flex-direction: row;
-      }
-
-      #protocolo-data {
-        justify-content: space-between;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div id="body" class="print">
-    <br />
-    <br />
-    <br />
+      <br />
+      <br />
+      <br />
       <div><b>REQUERIMENTO PARA SOLICITAÇÃO DE CERTIDÃO</b></div>
       <div><b>MINISTÉRIO DA DEFESA</b> - COMANDO DA AERONÁUTICA</div>
       <div>REQUERIMENTO</div>
@@ -48,9 +19,9 @@ const htmlBase = `<!DOCTYPE html>
         <div id="data">div Data</div>
       </div>
       <br />
-      <div id="nomeCompleto">paragrafo nome Completo</div>
-      <div>Ao Sr. Comandante da Academia da Força Aérea</div>
-      <div id="assunto">paragrafo Assunto</div>
+      <div id="nomeCompleto" class="esquerda">paragrafo nome Completo</div>
+      <div class="esquerda">Ao Sr. Comandante da Academia da Força Aérea</div>
+      <div id="assunto" class="esquerda">paragrafo Assunto</div>
       <br />
 
       <div id="justificado">
@@ -80,21 +51,18 @@ const htmlBase = `<!DOCTYPE html>
       </div>
       <br />
       <br />
-      <div>__________________________________________</div>
-      <div>ASSINATURA</div>
+      <div id="assinatura-box">
+        <div id="assinatura">
+          <div class="direita">__________________________________________</div>
+          <div class="direita">ASSINATURA</div>
+        </div>
+      </div>
       <br />
       <br />
       <br />
-      <div id="observacao">OBSERVAÇÃO</div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div id="observacao" class="esquerda">OBSERVAÇÃO</div>
     </div>
-</body>
+  </body>
 </html>`;
 
 function converteData(data) {
@@ -114,7 +82,6 @@ function converteData(data) {
 function createElementFromHTML(htmlString) {
   var div = document.createElement('div');
   div.innerHTML = htmlString;
-  // .trim();
 
   return div;
 }
@@ -256,9 +223,6 @@ async function enviar() {
   document.body.parentElement.appendChild(htmlAlimentado);
   document.body.style.display = 'none';
   window.print();
-  await new Promise((resolve) => setTimeout(resolve, 5000));
-  document.body.style.display = 'block';
-  document.getElementById('body').remove();
 }
 
 const falecidoCheckbox = document.getElementById('falecido');
@@ -274,6 +238,16 @@ falecidoCheckbox.onchange = (e) => {
   document.getElementById('relation').attributes.required = e.target.checked
     ? 'required'
     : '';
+};
+
+window.onbeforeprint = () => {
+  console.log('antes do print');
+};
+
+window.onafterprint = () => {
+  console.log('depois do print');
+  document.body.style.display = 'block';
+  document.getElementById('body').remove();
 };
 
 document.getElementById('falecidoFields').style.display =
