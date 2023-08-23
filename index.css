@@ -1,0 +1,75 @@
+* {
+  font-size: 14px;
+  font-family: open_sansregular,open sans,Arial,Helvetica,sans-serif;
+}
+
+.form-group {
+  display:flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.control-group {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2px 0px 20px 0px;
+}
+
+label {
+  width: 160px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+input[type=text], input[type=number], input[type=date], select {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+
+  width: 300px;
+  padding: 4px 6px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: auto;
+  background-color: #4c74af;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#cidadeNaturalidade {
+  width: 130px;
+}
+
+#labelEstadoNaturalidade {
+  width: auto;
+  margin-left: 10px;
+}
+
+
+#estadoNaturalidade {
+  width: 50px;
+}
+
+#selectPostoGraduacao{
+  width: 130px;
+}
+
+#postoGraduacao {
+  width: 160px;
+  margin-left: 10px;
+}
