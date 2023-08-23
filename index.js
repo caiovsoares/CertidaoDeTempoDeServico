@@ -256,7 +256,7 @@ async function enviar() {
   document.body.parentElement.appendChild(htmlAlimentado);
   document.body.style.display = 'none';
   window.print();
-  await new Promise((resolve) => setTimeout(resolve, 100));
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   document.body.style.display = 'block';
   document.getElementById('body').remove();
 }
