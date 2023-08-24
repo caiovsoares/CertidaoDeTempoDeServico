@@ -70,17 +70,22 @@ body {
 
 .control-group {
   display:flex;
-  flex-direction: row;
   align-items: center;
   margin: 2px 0px 20px 0px;
 }
 
-.naturalidade-group {
+.flex-row-group {
   display:flex;
+}
+
+.flex-row-group2 {
+  display:flex;
+  align-items: center;
   margin: 2px 0px 20px 0px;
 }
 
-.naturalidade-group2 {
+
+.flex-row-group3 {
   display:flex;
   align-items: center;
 }
@@ -109,8 +114,12 @@ input[type=text], input[type=number], input[type=date], select {
   box-sizing: border-box;
 }
 
+/*#nomeCompleto, #nomePai, #nomeMae {
+  width: 200px;
+}*/
+
 input[type=submit] {
-  width: 600px;
+  width: 940px;
   background-color: #4c74af;
   color: white;
   padding: 14px 20px;
@@ -120,18 +129,25 @@ input[type=submit] {
   cursor: pointer;
 }
 
-#cidadeNaturalidade {
-  width: 130px;
-}
-
-#labelEstadoNaturalidade {
+#labelEstadoNaturalidade, #labelTelefone {
   width: auto;
   margin-left: 10px;
 }
 
+#cidadeNaturalidade {
+  width: 130px;
+}
 
 #estadoNaturalidade {
   width: 50px;
+}
+
+#ddd {
+  width: 30px;
+}
+
+#telefone {
+  width: 190px;
 }
 
 #selectPostoGraduacao{
@@ -163,17 +179,28 @@ ESTILIZAÇÃO PARA CELULAR
     flex-direction: column;
   }
 
-  .naturalidade-group {
+  .flex-row-group {
     display:flex;
-    margin: 2px 0px 20px 0px;
+    flex-direction: column;
     width: 300px;
     justify-content: space-between;
   }
 
-  .naturalidade-group2 {
+  .flex-row-group2 {
+    display:flex;
+    margin: 2px 0px 20px 0px;
+    align-items: center;
+  }
+
+  .flex-row-group3 {
     display:flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .margin-left {
+    
+    margin-right: 10px;
   }
 
   #cidadeNaturalidade {
@@ -184,10 +211,29 @@ ESTILIZAÇÃO PARA CELULAR
     width: 100px;
   }
 
-  #labelEstadoNaturalidade {
+  #labelEstadoNaturalidade, #labelTelefone {
     width: auto;
     margin: 0;
   }
+
+  #cidadeNaturalidade {
+    width: 170px;
+  }
+
+  #estadoNaturalidade {
+    width: 120px;
+  }
+  
+  #ddd {
+    width: 40px;
+  }
+  
+  #telefone {
+    width: 250px;
+  }
+
+
+
 
   #selectPostoGraduacao{
     width: 300px;
