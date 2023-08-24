@@ -204,7 +204,7 @@ function alimentarHtml(html, dados) {
     dataInclusao
   )}, e EXCLUÍDO(A) no(a) ${omExcluido}, em ${converteData(
     dataExclusao
-  )}, no(a) ${selectPostoGraduacao} de ${postoGraduacao}, requer ao Sr. CERTIDÃO DE ${certidao} para fins de ${finalidade}, junto ao ${destino}.`;
+  )}, no(a) ${selectPostoGraduacao} de ${postoGraduacao}, requer ao Sr. Certidão De ${certidao} para fins de ${finalidade}, junto ao ${destino}.`;
 
   html.querySelector(
     '#p3'
