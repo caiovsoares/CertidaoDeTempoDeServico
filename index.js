@@ -252,3 +252,28 @@ window.onafterprint = () => {
 
 document.getElementById('falecidoFields').style.display =
   falecidoCheckbox.checked ? 'block' : 'none';
+
+const cep = document.getElementById('cep');
+new Inputmask('99999-999').mask(cep);
+
+const email = document.getElementById('email');
+new Inputmask({
+  mask: '*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]',
+  greedy: false,
+  clearIncomplete: true,
+  definitions: {
+    '*': {
+      validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~-]",
+      casing: 'lower',
+    },
+  },
+}).mask(email);
+
+const ddd = document.getElementById('ddd');
+new Inputmask('99').mask(ddd);
+
+const telefone = document.getElementById('telefone');
+new Inputmask('9999[9]-9999').mask(telefone);
+
+const vez = document.getElementById('vez');
+new Inputmask({ regex: '^[1-9]' }).mask(vez);

@@ -106,7 +106,7 @@ input[type=text], input[type=number], input[type=date], select {
   font-weight: normal;
   line-height: 20px;
 
-  width: 300px;
+  width: 200px;
   padding: 4px 6px;
   display: inline-block;
   border: 1px solid #ccc;
@@ -114,12 +114,8 @@ input[type=text], input[type=number], input[type=date], select {
   box-sizing: border-box;
 }
 
-/*#nomeCompleto, #nomePai, #nomeMae {
-  width: 200px;
-}*/
-
 input[type=submit] {
-  width: 940px;
+  width: 200px;
   background-color: #4c74af;
   color: white;
   padding: 14px 20px;
@@ -147,7 +143,11 @@ input[type=submit] {
 }
 
 #telefone {
-  width: 190px;
+  width: 100px;
+}
+
+#destino {
+  width: 130px;
 }
 
 #selectPostoGraduacao{

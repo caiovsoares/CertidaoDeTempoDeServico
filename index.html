@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Requerimento de Certidão de Tempo de Serviço</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.inputmask.min.js"></script>
   </head>
   <body class="no-print">
     <form action="javascript:enviar()" class="form-group">
@@ -14,17 +16,16 @@
       </div>
       <span id="falecidoFields">
         <div class="control-group">
-          <label for="nomeCompletoSolicitante"
-            >Nome Completo do Solicitante:</label
-          >
+          <label for="nomeCompletoSolicitante">Nome do Solicitante</label>
           <input
             type="text"
             id="nomeCompletoSolicitante"
             name="nomeCompletoSolicitante"
+            placeholder="Nome Completo"
           />
         </div>
         <div class="control-group">
-          <label for="relation">Relação do Solicitante com o Falecido:</label
+          <label for="relation">Relação do Solicitante com o Falecido</label
           ><select name="relation" id="relation">
             <option value="Pensionista">Pensionista</option>
             <option value="Beneficiário">Beneficiário</option>
@@ -32,58 +33,103 @@
         </div>
       </span>
       <div class="control-group">
-        <label for="nomeCompleto">Nome Completo:</label>
-        <input type="text" id="nomeCompleto" name="nomeCompleto" required />
+        <label for="nomeCompleto">Nome</label>
+        <input
+          type="text"
+          id="nomeCompleto"
+          name="nomeCompleto"
+          placeholder="Nome Completo"
+          required
+        />
       </div>
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="nomeMae">Nome Completo da Mãe:</label>
-          <input type="text" id="nomeMae" name="nomeMae" required />
+          <label for="nomeMae">Nome da Mãe</label>
+          <input
+            type="text"
+            id="nomeMae"
+            name="nomeMae"
+            placeholder="Nome Completo"
+            required
+          />
         </div>
         <div class="control-group">
-          <label for="nomePai">Nome Completo do Pai:</label>
-          <input type="text" id="nomePai" name="nomePai" />
+          <label for="nomePai">Nome do Pai</label>
+          <input
+            type="text"
+            id="nomePai"
+            name="nomePai"
+            placeholder="Nome Completo"
+          />
         </div>
       </div>
 
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="cidade">Cidade:</label>
+          <label for="cidade">Cidade</label>
           <input type="text" id="cidade" name="cidade" required />
         </div>
         <div class="control-group">
-          <label for="estado">Estado:</label>
-          <input type="text" id="estado" name="estado" required />
+          <label for="estado">UF</label
+          ><select name="estado" id="estado" required>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+            <option value="DF">DF</option>
+          </select>
         </div>
       </div>
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="cep">CEP:</label>
+          <label for="cep">CEP</label>
           <input type="text" id="cep" name="cep" required />
         </div>
         <div class="control-group">
-          <label for="bairro">Bairro:</label>
+          <label for="bairro">Bairro</label>
           <input type="text" id="bairro" name="bairro" required />
         </div>
       </div>
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="rua">Endereço:</label>
+          <label for="rua">Endereço</label>
           <input type="text" id="rua" name="rua" required />
         </div>
         <div class="control-group">
-          <label for="numero">Nº:</label>
+          <label for="numero">Nº</label>
           <input type="text" id="numero" name="numero" required />
         </div>
       </div>
 
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="email">E-mail:</label>
+          <label for="email">E-mail</label>
           <input type="text" id="email" name="email" required />
         </div>
         <div class="control-group">
-          <label for="nascimento">Data de nascimento:</label>
+          <label for="nascimento">Nascimento</label>
           <input type="date" id="nascimento" name="nascimento" required />
         </div>
       </div>
@@ -92,7 +138,7 @@
         <div class="flex-row-group2">
           <div class="flex-row-group3 margin-left">
             <label id="labelCidadeNaturalidade" for="cidadeNaturalidade"
-              >Natural da Cidade de:</label
+              >Naturalidade</label
             >
             <input
               type="text"
@@ -106,23 +152,46 @@
               id="labelEstadoNaturalidade"
               for="estadoNaturalidade"
               id="labelEstadoNaturalidade"
-              >e do Estado de:</label
+              >UF</label
             >
-            <input
-              type="text"
-              id="estadoNaturalidade"
-              name="estadoNaturalidade"
-              required
-            />
+            <select name="estadoNaturalidade" id="estadoNaturalidade" required>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="MG">MG</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+              <option value="DF">DF</option>
+            </select>
           </div>
         </div>
         <div class="flex-row-group2">
           <div class="flex-row-group3 margin-left">
-            <label id="labelDDD" for="ddd">DDD:</label>
+            <label id="labelDDD" for="ddd">DDD</label>
             <input type="text" id="ddd" name="ddd" required />
           </div>
           <div class="flex-row-group3">
-            <label id="labelTelefone" for="telefone">Telefone:</label>
+            <label id="labelTelefone" for="telefone">Telefone</label>
             <input type="text" id="telefone" name="telefone" required />
           </div>
         </div>
@@ -130,28 +199,28 @@
 
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="omIncluido">OM em que foi Incluído:</label>
+          <label for="omIncluido">OM Inclusão</label>
           <input type="text" id="omIncluido" name="omIncluido" required />
         </div>
         <div class="control-group">
-          <label for="omExcluido">OM em que foi Excluído:</label>
+          <label for="omExcluido">OM Exclusão</label>
           <input type="text" id="omExcluido" name="omExcluido" required />
         </div>
       </div>
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="dataInclusao">Data de Inclusão:</label>
+          <label for="dataInclusao">Data de Inclusão</label>
           <input type="date" id="dataInclusao" name="dataInclusao" required />
         </div>
         <div class="control-group">
-          <label for="dataExclusao">Data de Exclusão:</label>
+          <label for="dataExclusao">Data de Exclusão</label>
           <input type="date" id="dataExclusao" name="dataExclusao" required />
         </div>
       </div>
 
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="selectPostoGraduacao">Posto ou Graduação:</label
+          <label for="selectPostoGraduacao">Posto/Graduação</label
           ><select
             name="selectPostoGraduacao"
             id="selectPostoGraduacao"
@@ -169,7 +238,7 @@
           />
         </div>
         <div class="control-group">
-          <label for="destino">Orgão de Destino:</label>
+          <label for="destino">Orgão de Destino</label>
           <input
             type="text"
             id="destino"
@@ -181,7 +250,7 @@
       </div>
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="certidao">Tipo de Certidão:</label
+          <label for="certidao">Tipo de Certidão</label
           ><select name="certidao" id="certidao" required>
             <option value="Tempo de Serviço Militar">
               Certidão de Tempo de Serviço Militar
@@ -193,7 +262,7 @@
           </select>
         </div>
         <div class="control-group">
-          <label for="finalidade">Para fins de:</label
+          <label for="finalidade">Para fins de</label
           ><select name="finalidade" id="finalidade" required>
             <option value="Averbação">Averbação</option>
             <option value="Aposentadoria">Aposentadoria</option>
@@ -202,11 +271,11 @@
       </div>
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="vez">É a Xª vez que requer:</label>
-          <input type="number" id="vez" name="vez" required />
+          <label for="vez">É a Xª vez que requer</label>
+          <input type="text" id="vez" name="vez" required />
         </div>
         <div class="control-group">
-          <label for="observacao">Observação:</label>
+          <label for="observacao">Observação</label>
           <input type="text" id="observacao" name="observacao" />
         </div>
       </div>
