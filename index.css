@@ -63,13 +63,14 @@ input[type=text], input[type=number], input[type=date], select {
 
 input[type=submit] {
   width: 200px;
-  background-color: #4c74af;
+  background-color: #1B52AC;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 #nomeCompleto, #nomeMae, #nomePai {
