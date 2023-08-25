@@ -12,26 +12,33 @@
   </head>
   <body class="no-print">
     <form action="javascript:enviar()" class="form-group">
-      <div class="control-group">
+      <div class="control-group falecido">
         <label for="falecido">Militar Falecido?</label>
         <input type="checkbox" id="falecido" name="falecido" />
       </div>
       <span id="falecidoFields">
-        <div class="control-group">
-          <label for="nomeCompletoSolicitante">Nome do Solicitante</label>
-          <input
-            type="text"
-            id="nomeCompletoSolicitante"
-            name="nomeCompletoSolicitante"
-            placeholder="Nome Completo"
-          />
-        </div>
-        <div class="control-group">
-          <label for="relation">Relação do Solicitante com o Falecido</label
-          ><select name="relation" id="relation">
-            <option value="Pensionista">Pensionista</option>
-            <option value="Beneficiário">Beneficiário</option>
-          </select>
+        <div class="flex-row-group">
+          <div class="control-group">
+            <label
+              for="nomeCompletoSolicitante"
+              id="labelNomeCompletoSolicitante"
+              >Solicitante</label
+            >
+            <input
+              type="text"
+              id="nomeCompletoSolicitante"
+              name="nomeCompletoSolicitante"
+              placeholder="Nome Completo"
+            />
+          </div>
+          <div class="control-group">
+            <label for="relation" id="labelRelation"
+              >Relação com o Falecido</label
+            ><select name="relation" id="relation">
+              <option value="Pensionista">Pensionista</option>
+              <option value="Beneficiário">Beneficiário</option>
+            </select>
+          </div>
         </div>
       </span>
       <div class="control-group">
@@ -210,9 +217,6 @@
           <!-- <label for="dataInclusao">Data de Inclusão</label> -->
           <input type="date" id="dataInclusao" name="dataInclusao" required />
         </div>
-      </div>
-
-      <div class="flex-row-group">
         <div class="control-group">
           <label for="omExcluido">OM Exclusão</label>
           <input
@@ -228,7 +232,35 @@
           <input type="date" id="dataExclusao" name="dataExclusao" required />
         </div>
       </div>
-
+      <div class="flex-row-group">
+        <div class="control-group">
+          <label for="certidao">Certidão de</label
+          ><select name="certidao" id="certidao" required>
+            <option value="Tempo de Serviço Militar">
+              Tempo de Serviço Militar
+            </option>
+            <option value="Serviço de Guerra">Serviço de Guerra</option>
+            <option value="Inteiro Teor">Inteiro Teor</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="finalidade" id="labelFinalidade">Para fins de</label
+          ><select name="finalidade" id="finalidade" required>
+            <option value="Averbação">Averbação</option>
+            <option value="Aposentadoria">Aposentadoria</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="destino" id="labelDestino">Destino</label>
+          <input
+            type="text"
+            id="destino"
+            name="destino"
+            placeholder="INSS"
+            required
+          />
+        </div>
+      </div>
       <div class="flex-row-group">
         <div class="control-group">
           <label for="selectPostoGraduacao">Posto/Graduação</label
@@ -249,48 +281,11 @@
           />
         </div>
         <div class="control-group">
-          <label for="destino">Destino</label>
-          <input
-            type="text"
-            id="destino"
-            name="destino"
-            placeholder="INSS"
-            required
-          />
-        </div>
-      </div>
-      <div class="flex-row-group">
-        <div class="control-group">
-          <label for="certidao">Certidão de</label
-          ><select name="certidao" id="certidao" required>
-            <option value="Tempo de Serviço Militar">
-              Tempo de Serviço Militar
-            </option>
-            <option value="Serviço de Guerra">Serviço de Guerra</option>
-            <option value="Inteiro Teor">Inteiro Teor</option>
-          </select>
+          <label for="vez" id="labelVez">Vez que requer</label>
+          <input type="text" id="vez" name="vez" placeholder="1ª" required />
         </div>
         <div class="control-group">
-          <label for="finalidade">Para fins de</label
-          ><select name="finalidade" id="finalidade" required>
-            <option value="Averbação">Averbação</option>
-            <option value="Aposentadoria">Aposentadoria</option>
-          </select>
-        </div>
-      </div>
-      <div class="flex-row-group">
-        <div class="control-group">
-          <label for="vez">Vez que requer</label>
-          <input
-            type="text"
-            id="vez"
-            name="vez"
-            placeholder="É a Xª vez que requer"
-            required
-          />
-        </div>
-        <div class="control-group">
-          <label for="observacao">Observação</label>
+          <label for="observacao" id="labelObservacao">Observação</label>
           <input type="text" id="observacao" name="observacao" />
         </div>
       </div>

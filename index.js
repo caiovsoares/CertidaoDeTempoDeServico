@@ -208,7 +208,7 @@ function alimentarHtml(html, dados) {
 
   html.querySelector(
     '#p3'
-  ).innerHTML = `3.&emsp;&emsp;É a ${vez}ª vez que requer.`;
+  ).innerHTML = `3.&emsp;&emsp;É a ${vez} vez que requer.`;
   html.querySelector('#observacao').innerHTML = observacao
     ? `OBSERVAÇÃO: ${observacao}`
     : '';
@@ -276,4 +276,4 @@ const telefone = document.getElementById('telefone');
 new Inputmask({ regex: '[1-9]{8,9}' }).mask(telefone);
 
 const vez = document.getElementById('vez');
-new Inputmask({ regex: '^[1-9]' }).mask(vez);
+new Inputmask({ regex: '^[1-9]ª' }).mask(vez);
