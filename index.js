@@ -200,7 +200,7 @@ function alimentarHtml(html, dados) {
     nomePai || 'NÃO INFORMADO'
   } nascido(a) em ${converteData(
     nascimento
-  )}, natural de ${cidadeNaturalidade}-${estadoNaturalidade} residente à ${rua},  ${numero},  ${bairro},  ${cidade}-${estado}, Cep: ${cep}, telefone nº(${ddd}) ${telefone}, tendo sido INCLUÍDO(A) no Comando da Aeronáutica no(a) ${omIncluido}, em ${converteData(
+  )}, natural de ${cidadeNaturalidade}-${estadoNaturalidade} residente à ${rua},  ${numero},  ${bairro},  ${cidade}-${estado}, Cep: ${cep}, telefone nº${ddd}${telefone}, tendo sido INCLUÍDO(A) no Comando da Aeronáutica no(a) ${omIncluido}, em ${converteData(
     dataInclusao
   )}, e EXCLUÍDO(A) no(a) ${omExcluido}, em ${converteData(
     dataExclusao
@@ -270,10 +270,10 @@ new Inputmask({
 }).mask(email);
 
 const ddd = document.getElementById('ddd');
-new Inputmask('99').mask(ddd);
+new Inputmask('(99)').mask(ddd);
 
 const telefone = document.getElementById('telefone');
-new Inputmask('9999[9]-9999').mask(telefone);
+new Inputmask({ regex: '[1-9]{8,9}' }).mask(telefone);
 
 const vez = document.getElementById('vez');
 new Inputmask({ regex: '^[1-9]' }).mask(vez);

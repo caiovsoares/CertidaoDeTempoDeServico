@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Requerimento de Certidão de Tempo de Serviço</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="pdf.css" />
+    <link rel="stylesheet" href="mobile.css" />
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/jquery.inputmask.min.js"></script>
   </head>
@@ -42,35 +44,47 @@
           required
         />
       </div>
-      <div class="flex-row-group">
-        <div class="control-group">
-          <label for="nomeMae">Nome da Mãe</label>
-          <input
-            type="text"
-            id="nomeMae"
-            name="nomeMae"
-            placeholder="Nome Completo"
-            required
-          />
-        </div>
-        <div class="control-group">
-          <label for="nomePai">Nome do Pai</label>
-          <input
-            type="text"
-            id="nomePai"
-            name="nomePai"
-            placeholder="Nome Completo"
-          />
-        </div>
+      <div class="control-group">
+        <label for="nomeMae">Nome da Mãe</label>
+        <input
+          type="text"
+          id="nomeMae"
+          name="nomeMae"
+          placeholder="Nome Completo"
+          required
+        />
+      </div>
+      <div class="control-group">
+        <label for="nomePai">Nome do Pai</label>
+        <input
+          type="text"
+          id="nomePai"
+          name="nomePai"
+          placeholder="Nome Completo"
+        />
       </div>
 
+      <div class="flex-row-group">
+        <div class="control-group">
+          <label for="rua">Endereço</label>
+          <input type="text" id="rua" name="rua" required />
+        </div>
+        <div class="control-group">
+          <label for="numero" id="labelNumero">Nº</label>
+          <input type="text" id="numero" name="numero" required />
+        </div>
+        <div class="control-group">
+          <label for="bairro" id="labelBairro">Bairro</label>
+          <input type="text" id="bairro" name="bairro" required />
+        </div>
+      </div>
       <div class="flex-row-group">
         <div class="control-group">
           <label for="cidade">Cidade</label>
           <input type="text" id="cidade" name="cidade" required />
         </div>
         <div class="control-group">
-          <label for="estado">UF</label
+          <label for="estado" id="labelEstado">UF</label
           ><select name="estado" id="estado" required>
             <option value="AC">AC</option>
             <option value="AL">AL</option>
@@ -101,25 +115,9 @@
             <option value="DF">DF</option>
           </select>
         </div>
-      </div>
-      <div class="flex-row-group">
         <div class="control-group">
-          <label for="cep">CEP</label>
+          <label for="cep" id="labelCep">CEP</label>
           <input type="text" id="cep" name="cep" required />
-        </div>
-        <div class="control-group">
-          <label for="bairro">Bairro</label>
-          <input type="text" id="bairro" name="bairro" required />
-        </div>
-      </div>
-      <div class="flex-row-group">
-        <div class="control-group">
-          <label for="rua">Endereço</label>
-          <input type="text" id="rua" name="rua" required />
-        </div>
-        <div class="control-group">
-          <label for="numero">Nº</label>
-          <input type="text" id="numero" name="numero" required />
         </div>
       </div>
 
@@ -128,13 +126,23 @@
           <label for="email">E-mail</label>
           <input type="text" id="email" name="email" required />
         </div>
-        <div class="control-group">
-          <label for="nascimento">Nascimento</label>
-          <input type="date" id="nascimento" name="nascimento" required />
+        <div class="flex-row-group2">
+          <div class="flex-row-group3 margin-left">
+            <label id="labelDDD" for="ddd">Telefone</label>
+            <input type="text" id="ddd" name="ddd" required />
+            <input type="text" id="telefone" name="telefone" required />
+          </div>
+          <!-- <div class="flex-row-group3">
+            <label id="labelTelefone" for="telefone">Telefone</label>
+          </div> -->
         </div>
       </div>
 
-      <div class="flex-row-group3">
+      <div class="flex-row-group">
+        <div class="control-group">
+          <label for="nascimento" id="labelNascimento">Nascimento</label>
+          <input type="date" id="nascimento" name="nascimento" required />
+        </div>
         <div class="flex-row-group2">
           <div class="flex-row-group3 margin-left">
             <label id="labelCidadeNaturalidade" for="cidadeNaturalidade"
@@ -185,35 +193,38 @@
             </select>
           </div>
         </div>
-        <div class="flex-row-group2">
-          <div class="flex-row-group3 margin-left">
-            <label id="labelDDD" for="ddd">DDD</label>
-            <input type="text" id="ddd" name="ddd" required />
-          </div>
-          <div class="flex-row-group3">
-            <label id="labelTelefone" for="telefone">Telefone</label>
-            <input type="text" id="telefone" name="telefone" required />
-          </div>
-        </div>
       </div>
 
       <div class="flex-row-group">
         <div class="control-group">
           <label for="omIncluido">OM Inclusão</label>
-          <input type="text" id="omIncluido" name="omIncluido" required />
+          <input
+            type="text"
+            id="omIncluido"
+            name="omIncluido"
+            placeholder="AFA"
+            required
+          />
         </div>
         <div class="control-group">
-          <label for="omExcluido">OM Exclusão</label>
-          <input type="text" id="omExcluido" name="omExcluido" required />
-        </div>
-      </div>
-      <div class="flex-row-group">
-        <div class="control-group">
-          <label for="dataInclusao">Data de Inclusão</label>
+          <!-- <label for="dataInclusao">Data de Inclusão</label> -->
           <input type="date" id="dataInclusao" name="dataInclusao" required />
         </div>
+      </div>
+
+      <div class="flex-row-group">
         <div class="control-group">
-          <label for="dataExclusao">Data de Exclusão</label>
+          <label for="omExcluido">OM Exclusão</label>
+          <input
+            type="text"
+            id="omExcluido"
+            name="omExcluido"
+            placeholder="AFA"
+            required
+          />
+        </div>
+        <div class="control-group">
+          <!-- <label for="dataExclusao">Data de Exclusão</label> -->
           <input type="date" id="dataExclusao" name="dataExclusao" required />
         </div>
       </div>
@@ -233,32 +244,30 @@
             type="text"
             id="postoGraduacao"
             name="postoGraduacao"
-            placeholder="Exemplo: S2"
+            placeholder="S2"
             required
           />
         </div>
         <div class="control-group">
-          <label for="destino">Orgão de Destino</label>
+          <label for="destino">Destino</label>
           <input
             type="text"
             id="destino"
             name="destino"
-            placeholder="Exemplo: INSS"
+            placeholder="INSS"
             required
           />
         </div>
       </div>
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="certidao">Tipo de Certidão</label
+          <label for="certidao">Certidão de</label
           ><select name="certidao" id="certidao" required>
             <option value="Tempo de Serviço Militar">
-              Certidão de Tempo de Serviço Militar
+              Tempo de Serviço Militar
             </option>
-            <option value="Serviço de Guerra">
-              Certidão de Serviço de Guerra
-            </option>
-            <option value="Inteiro Teor">Certidão de Inteiro Teor</option>
+            <option value="Serviço de Guerra">Serviço de Guerra</option>
+            <option value="Inteiro Teor">Inteiro Teor</option>
           </select>
         </div>
         <div class="control-group">
@@ -271,8 +280,14 @@
       </div>
       <div class="flex-row-group">
         <div class="control-group">
-          <label for="vez">É a Xª vez que requer</label>
-          <input type="text" id="vez" name="vez" required />
+          <label for="vez">Vez que requer</label>
+          <input
+            type="text"
+            id="vez"
+            name="vez"
+            placeholder="É a Xª vez que requer"
+            required
+          />
         </div>
         <div class="control-group">
           <label for="observacao">Observação</label>

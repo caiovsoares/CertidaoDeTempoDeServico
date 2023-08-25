@@ -1,0 +1,48 @@
+#body {
+  margin-inline: 80px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#justificado {
+  text-align: justify;
+}
+
+.esquerda {
+  text-align: left;
+}
+
+.direita {
+  text-align: right;
+}
+
+#anexos {
+  display: flex;
+  flex-direction: row;
+}
+
+#anexos1 {
+  margin-right: 5px;
+}
+
+#protocolo-data,
+#data {
+  display: flex;
+  flex-direction: row;
+}
+
+#protocolo-data {
+  justify-content: space-between;
+}
+
+#assinatura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#assinatura-box {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
