@@ -1,6 +1,10 @@
 @media only screen and (max-width: 600px) {
   
-  label {
+  label, #labelRelation, #labelObservacao, #labelVez,
+  #labelDestino, #labelFinalidade, 
+  #labelDDD, #labelCidadeNaturalidade, 
+  #labelNumero, #labelBairro, #labelEstado, 
+  #labelCep, #labelEstadoNaturalidade, #labelTelefone {
     width: 100%;
     text-align: left;
     margin: 0
@@ -10,6 +14,18 @@
     width: 300px;
   }
 
+  .falecido {
+    width: auto;
+  }
+
+  #nomeCompleto, #nomeMae, #nomePai, #nomeCompletoSolicitante, 
+  #relation, #cidadeNaturalidade, #rua, #email, #numero, #cidade, 
+  #estadoNaturalidade, #estado, #ddd, #telefone, #omIncluido, #omExcluido,
+  #certidao, #finalidade, #destino, #selectPostoGraduacao,
+  #postoGraduacao, #vez, #observacao {
+    width: 200px;
+  }
+
   .control-group {
     flex-direction: column;
   }
@@ -17,7 +33,6 @@
   .flex-row-group {
     display:flex;
     flex-direction: column;
-    width: 300px;
     justify-content: space-between;
   }
 
@@ -31,40 +46,5 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .margin-left {
-    
-    margin-right: 10px;
-  }
-
-  #labelEstadoNaturalidade, #labelTelefone {
-    width: auto;
-    margin: 0;
-  }
-
-  #cidadeNaturalidade {
-    width: 170px;
-  }
-
-  #estadoNaturalidade {
-    width: 120px;
-  }
-  
-  #ddd {
-    width: 40px;
-  }
-  
-  #telefone {
-    width: 250px;
-  }
-
-  #selectPostoGraduacao{
-    width: 300px;
-  }
-
-  #postoGraduacao {
-    width: 300px;
-    margin: 0;
   }
 }

@@ -171,10 +171,6 @@ input[type=date] {
   width: 30px;
 }
 
-#omIncluido, #omExcluido {
-  width: 110px;
-}
-
 #observacao {
   width: 170px;
 }
