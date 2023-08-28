@@ -240,12 +240,9 @@ falecidoCheckbox.onchange = (e) => {
     : '';
 };
 
-window.onbeforeprint = () => {
-  console.log('antes do print');
-};
-
-window.onafterprint = () => {
-  console.log('depois do print');
+window.onafterprint = async () => {
+  if (navigator.maxTouchPoints > 1)
+    await new Promise((resolve) => setTimeout(resolve, 3000));
   document.body.style.display = 'block';
   document.getElementById('body').remove();
 };
