@@ -28,10 +28,10 @@ width: 720px;
 .flex-row-group2 {
   display:flex;
   align-items: center;
-  margin: 2px 0px 20px 0px;
 }
 
 .flex-row-group3 {
+  margin: 2px 0px 20px 0px;
   display:flex;
   align-items: center;
 }
@@ -78,7 +78,7 @@ input[type=submit] {
 }
 
 #nomeCompletoSolicitante{
-  width: 320px;
+  width: 490px;
 }
 
 #relation {

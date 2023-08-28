@@ -24,20 +24,16 @@
               id="labelNomeCompletoSolicitante"
               >Solicitante</label
             >
+            <select name="relation" id="relation">
+              <option value="Pensionista">Pensionista</option>
+              <option value="Beneficiário">Beneficiário</option>
+            </select>
             <input
               type="text"
               id="nomeCompletoSolicitante"
               name="nomeCompletoSolicitante"
               placeholder="Nome Completo"
             />
-          </div>
-          <div class="control-group">
-            <label for="relation" id="labelRelation"
-              >Relação com o Falecido</label
-            ><select name="relation" id="relation">
-              <option value="Pensionista">Pensionista</option>
-              <option value="Beneficiário">Beneficiário</option>
-            </select>
           </div>
         </div>
       </span>
@@ -86,41 +82,43 @@
         </div>
       </div>
       <div class="flex-row-group">
-        <div class="control-group">
-          <label for="cidade">Cidade</label>
-          <input type="text" id="cidade" name="cidade" required />
-        </div>
-        <div class="control-group">
-          <label for="estado" id="labelEstado">UF</label
-          ><select name="estado" id="estado" required>
-            <option value="AC">AC</option>
-            <option value="AL">AL</option>
-            <option value="AP">AP</option>
-            <option value="AM">AM</option>
-            <option value="BA">BA</option>
-            <option value="CE">CE</option>
-            <option value="ES">ES</option>
-            <option value="GO">GO</option>
-            <option value="MA">MA</option>
-            <option value="MT">MT</option>
-            <option value="MS">MS</option>
-            <option value="MG">MG</option>
-            <option value="PA">PA</option>
-            <option value="PB">PB</option>
-            <option value="PR">PR</option>
-            <option value="PE">PE</option>
-            <option value="PI">PI</option>
-            <option value="RJ">RJ</option>
-            <option value="RN">RN</option>
-            <option value="RS">RS</option>
-            <option value="RO">RO</option>
-            <option value="RR">RR</option>
-            <option value="SC">SC</option>
-            <option value="SP">SP</option>
-            <option value="SE">SE</option>
-            <option value="TO">TO</option>
-            <option value="DF">DF</option>
-          </select>
+        <div class="flex-row-group2">
+          <div class="control-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" required />
+          </div>
+          <div class="control-group">
+            <label for="estado" id="labelEstado">UF</label
+            ><select name="estado" id="estado" required>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="MG">MG</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+              <option value="DF">DF</option>
+            </select>
+          </div>
         </div>
         <div class="control-group">
           <label for="cep" id="labelCep">CEP</label>
@@ -218,7 +216,7 @@
           <input type="date" id="dataInclusao" name="dataInclusao" required />
         </div>
         <div class="control-group">
-          <label for="omExcluido">OM Exclusão</label>
+          <label for="omExcluido" id="labelOmExcluido">OM Exclusão</label>
           <input
             type="text"
             id="omExcluido"
@@ -244,7 +242,7 @@
           </select>
         </div>
         <div class="control-group">
-          <label for="finalidade" id="labelFinalidade">Para fins de</label
+          <label for="finalidade" id="labelFinalidade">Para</label
           ><select name="finalidade" id="finalidade" required>
             <option value="Averbação">Averbação</option>
             <option value="Aposentadoria">Aposentadoria</option>
