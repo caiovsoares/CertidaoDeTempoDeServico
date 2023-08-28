@@ -18,7 +18,7 @@ body {
 }
 
 .falecido {
-width: 720px;
+width: 620px;
 }
 
 .flex-row-group {
@@ -74,36 +74,32 @@ input[type=submit] {
 }
 
 #nomeCompleto, #nomeMae, #nomePai {
-  width: 600px;
+  width: 500px;
 }
 
 #nomeCompletoSolicitante{
-  width: 490px;
+  width: 390px;
 }
 
 #relation {
   width: 110px;
 }
 
-#cidadeNaturalidade {
-  width: 272px;
-}
-
 #rua {
-  width: 332px;
+  width: 232px;
 }
 
 #labelRelation, #labelObservacao, #labelVez,
 #labelDestino, #labelFinalidade, 
 #labelDDD, #labelCidadeNaturalidade, 
 #labelNumero, #labelBairro, #labelEstado, 
-#labelCep, #labelEstadoNaturalidade, #labelTelefone {
+#labelCep, #labelEstadoNaturalidade, #labelTelefone, #labelOmExcluido  {
   width: auto;
   margin-left: 10px;
 }
 
 #email {
-  width: 401px;
+  width: 301px;
 }
 
 #numero {
@@ -111,7 +107,11 @@ input[type=submit] {
 }
 
 #cidade {
-  width: 332px;
+  width: 232px;
+}
+
+#cidadeNaturalidade {
+  width: 172px;
 }
 
 #estadoNaturalidade, #estado {
@@ -138,21 +138,21 @@ input[type=date] {
 }
 
 #omIncluido, #omExcluido {
-  width: 110px;
+  width: 70px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 #certidao {
-  width: 200px;
+  width: 180px;
 }
 
 #finalidade {
-  width: 140px;
+  width: 120px;
 }
 
 #destino {
-  width: 100px;
+  width: 83px;
 }
 
 #selectPostoGraduacao{
@@ -162,7 +162,7 @@ input[type=date] {
 }
 
 #postoGraduacao {
-  width: 80px;
+  width: 50px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -172,5 +172,5 @@ input[type=date] {
 }
 
 #observacao {
-  width: 170px;
+  width: 100px;
 }
